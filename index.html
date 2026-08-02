@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pablo Ibáñez-Porras — Investigador predoctoral en CISA-INIA-CSIC</title>
+<meta content="CV de Pablo Ibáñez-Porras: Investigador predoctoral en CISA-INIA-CSIC. Enfoque aplicado de la física y las matemáticas al sector agrotecnológico mediante modelización matemática y aplicación de algoritmos GIS." name="description"/>
+<meta content="Pablo Ibáñez-Porras" name="author"/>
+<meta content="profile" property="og:type"/>
+<meta content="Pablo Ibáñez-Porras — Investigador predoctoral en CISA-INIA-CSIC" property="og:title"/>
+<meta content="Enfoque aplicado de la física y las matemáticas al sector agrotecnológico mediante modelización matemática y aplicación de algoritmos GIS." property="og:description"/>
+<meta content="summary" name="twitter:card"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pablo Ibáñez-Porras",
+  "jobTitle": "Investigador predoctoral en CISA-INIA-CSIC",
+  "email": "mailto:pablo.ibanez@inia.csic.es",
+  "sameAs": ["https://www.linkedin.com/in/pablo-ip", "https://orcid.org/0009-0004-0618-8646", "https://www.researchgate.net/profile/Pablo-Ibanez-Porras", "https://scholar.google.es/citations?user=KIKnnSYAAAAJ&hl", "https://storymaps.arcgis.com/stories/7a76b3329ef0490c9ec07db7ac4d395c"]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&amp;family=Work+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --wheat:#F3E8C9;
+    --wheat-deep:#E7D6A0;
+    --cream:#FBF6E9;
+    --soil:#3B2A1A;
+    --soil-soft:#77644C;
+    --clay:#B5651D;
+    --olive:#5B6E3B;
+    --gold:#CE9B1E;
+    --line: rgba(59,42,26,0.14);
+    --display: 'Fraunces', Georgia, serif;
+    --body: 'Work Sans', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--wheat);
+    color: var(--soil);
+    font-family: var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+
+  .wrap{ max-width:960px; margin:0 auto; padding:0 28px; position:relative; z-index:2; }
+  :focus-visible{ outline:2px solid var(--clay); outline-offset:3px; }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+  .bg-graph{ position:absolute; inset:0; z-index:0; pointer-events:none; overflow:visible; }
+  .bg-drift{ animation: bgDrift 55s ease-in-out infinite alternate; }
+  @keyframes bgDrift{ from{ transform:translate(0,0); } to{ transform:translate(-42px, 26px); } }
+  #bgHover{ transition: transform .6s ease; }
+  .bg-edge{ stroke:var(--soil); stroke-width:1; opacity:.09; transition:opacity .4s ease; }
+  .bg-node{ fill:var(--soil); opacity:.16; animation:bgPulse 7s ease-in-out infinite; transition:opacity .4s ease; }
+  @keyframes bgPulse{ 0%,100%{ opacity:.16; } 50%{ opacity:.34; } }
+  header.hero:hover .bg-edge{ opacity:.16; }
+  header.hero:hover .bg-node{ opacity:.26; }
+
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,232,201,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .brand{ font-family:var(--mono); font-size:13px; letter-spacing:0.06em; color:var(--clay); text-decoration:none; display:flex; align-items:center; gap:8px; }
+  .brand .dot{ width:7px; height:7px; border-radius:50%; background:var(--gold); animation:pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{ transform:scale(1); opacity:1; } 50%{ transform:scale(1.5); opacity:.55; } }
+
+  .navlinks{ display:flex; gap:24px; list-style:none; font-size:13.5px; flex-wrap:wrap; }
+  .navlinks a{ text-decoration:none; color:var(--soil-soft); position:relative; padding-bottom:3px; transition:color .2s; }
+  .navlinks a::after{ content:''; position:absolute; left:0; bottom:0; width:0; height:1.5px; background:var(--clay); transition:width .25s ease; }
+  .navlinks a:hover, .navlinks a:focus-visible{ color:var(--soil); }
+  .navlinks a:hover::after, .navlinks a:focus-visible::after{ width:100%; }
+
+  header.hero{ padding:100px 0 70px; position:relative; overflow:hidden; }
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--olive); margin-bottom:18px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:''; width:22px; height:1px; background:var(--olive); display:inline-block; }
+
+  h1.name{
+    font-family:var(--display); font-weight:700; font-size:clamp(40px, 7vw, 76px);
+    line-height:1.02; letter-spacing:-0.01em; color:var(--soil);
+    transform-origin:left center;
+    transition: transform .5s cubic-bezier(.22,1,.36,1);
+  }
+  header.hero:hover h1.name{ transform:scale(1.045); }
+  .name .word{ display:inline-block; opacity:0; transform:translateY(18px); animation:riseWord .7s ease forwards; }
+  .name .word:nth-child(1){ animation-delay:.05s; }
+  .name .word:nth-child(2){ animation-delay:.2s; }
+  @keyframes riseWord{ to{ opacity:1; transform:translateY(0); } }
+
+  .role{ font-family:var(--body); font-size:clamp(16px,2.4vw,20px); color:var(--soil-soft); margin-top:18px; max-width:620px; }
+
+  .hero-links{ margin-top:38px; display:flex; flex-wrap:wrap; gap:14px; }
+  .hero-links a{
+    font-family:var(--mono); font-size:12.5px; text-decoration:none; color:var(--soil);
+    border:1px solid var(--line); padding:9px 16px; border-radius:999px;
+    background:var(--cream);
+    transition:border-color .2s, color .2s, transform .2s;
+  }
+  .hero-links a:hover, .hero-links a:focus-visible{ border-color:var(--clay); color:var(--clay); transform:translateY(-2px); }
+
+  .search-wrap{ margin-top:44px; }
+  .search-label{ font-family:var(--mono); font-size:11.5px; color:var(--soil-soft); letter-spacing:.08em; text-transform:uppercase; margin-bottom:10px; }
+  .search-box{
+    display:flex; align-items:center; gap:10px;
+    border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+    background:var(--cream); transition:border-color .2s, box-shadow .2s;
+  }
+  .search-box:focus-within{ border-color:var(--clay); box-shadow:0 0 0 3px rgba(181,101,29,0.12); }
+  .search-box svg{ flex-shrink:0; opacity:.55; }
+  #search{ background:none; border:none; outline:none; color:var(--soil); font-family:var(--body); font-size:15px; width:100%; }
+  #search::placeholder{ color:var(--soil-soft); }
+  #search-count{ font-family:var(--mono); font-size:12px; color:var(--soil-soft); white-space:nowrap; }
+
+  section{ padding:80px 0; position:relative; }
+  section.alt{ background:var(--wheat-deep); }
+
+  .section-head{ display:flex; align-items:center; gap:16px; margin-bottom:40px; }
+  .section-num{ font-family:var(--mono); font-size:13px; color:var(--clay); }
+  .section-title{ font-family:var(--display); font-weight:700; font-size:clamp(26px,4vw,36px); white-space:nowrap; }
+
+  .node-sep{ flex:1; height:16px; min-width:70px; display:flex; align-items:center; justify-content:space-between; position:relative; }
+  .node-sep::before{ content:''; position:absolute; left:2px; right:2px; top:50%; height:1px; background:var(--line); }
+  .sep-node{
+    width:6px; height:6px; border-radius:50%; background:var(--clay);
+    position:relative; z-index:1; opacity:0;
+    transform:translate(var(--dx,0), var(--dy,0));
+    transition:transform .55s cubic-bezier(.22,1,.36,1), opacity .5s ease;
+  }
+  .sep-node:nth-child(1){ transition-delay:0s; }
+  .sep-node:nth-child(2){ background:var(--olive); transition-delay:.12s; }
+  .sep-node:nth-child(3){ background:var(--gold); transition-delay:.24s; }
+  .sep-node:nth-child(4){ background:var(--olive); transition-delay:.36s; }
+  .node-sep.in-view .sep-node{ transform:translate(0,0); opacity:1; }
+
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  .about-grid p{ font-size:16px; color:var(--soil-soft); }
+  .about-grid p + p{ margin-top:16px; }
+  .stat-list{ display:flex; flex-direction:column; gap:22px; }
+  .stat{ border-left:2px solid var(--olive); padding-left:16px; }
+  .stat b{ font-family:var(--mono); font-size:26px; display:block; color:var(--soil); }
+  .stat span{ font-size:13px; color:var(--soil-soft); }
+  @media (max-width:720px){ .about-grid{ grid-template-columns:1fr; } }
+
+  .timeline{ position:relative; }
+  .timeline::before{ content:''; position:absolute; left:11px; top:6px; bottom:6px; width:1px; background:var(--line); }
+  .tl-item{ position:relative; padding-left:44px; margin-bottom:40px; }
+  .tl-item:last-child{ margin-bottom:0; }
+  .tl-dot{ position:absolute; left:4px; top:4px; width:15px; height:15px; border-radius:50%; background:var(--wheat); border:2px solid var(--olive); transition:background .3s; }
+  .tl-item.in-view .tl-dot{ background:var(--gold); }
+  .tl-period{ font-family:var(--mono); font-size:12px; color:var(--olive); letter-spacing:.04em; }
+  .tl-role{ font-family:var(--display); font-size:20px; font-weight:600; margin-top:4px; }
+  .tl-org{ font-size:14px; color:var(--soil-soft); margin-top:2px; }
+  .tl-desc{ margin-top:10px; font-size:15px; color:var(--soil-soft); max-width:640px; }
+  .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .tag{ font-family:var(--mono); font-size:11px; padding:5px 10px; border-radius:6px; background:rgba(91,110,59,0.12); color:var(--olive); }
+
+  .hidden{ display:none !important; }
+
+  .skills-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px; }
+  .skill-card{ border:1px solid var(--line); border-radius:10px; padding:18px; background:var(--cream); transition:border-color .25s, transform .25s, box-shadow .25s; }
+  .skill-card:hover{ border-color:var(--clay); transform:translateY(-4px) rotate(-0.4deg); box-shadow:0 10px 24px rgba(59,42,26,0.08); }
+  .skill-card h4{ font-family:var(--display); font-size:16px; margin-bottom:4px; }
+  .skill-card p{ font-size:13px; color:var(--soil-soft); }
+
+  .proj-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .proj-card{ border:1px solid var(--line); border-radius:12px; padding:26px; background:var(--cream); display:flex; flex-direction:column; gap:10px; transition:border-color .25s, transform .25s; }
+  .proj-card:hover{ border-color:var(--gold); transform:translateY(-4px); }
+  .proj-kind{ font-family:var(--mono); font-size:11px; color:var(--olive); text-transform:uppercase; letter-spacing:.06em; }
+  .proj-title{ font-family:var(--display); font-size:19px; font-weight:600; }
+  .proj-desc{ font-size:14.5px; color:var(--soil-soft); }
+  @media (max-width:720px){ .proj-grid{ grid-template-columns:1fr; } }
+
+  /* Actividad académica: subsecciones compactas */
+  .al-group{ margin-bottom:36px; }
+  .al-group:last-child{ margin-bottom:0; }
+  .al-heading{
+    font-family:var(--display); font-size:18px; font-weight:600; color:var(--soil);
+    border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:6px;
+  }
+  .al-heading .al-count{ font-family:var(--mono); font-size:12px; color:var(--soil-soft); font-weight:400; }
+  .al-row{ padding:11px 0; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:2px; }
+  .al-rows .al-row:last-child{ border-bottom:none; }
+  .al-title{ font-size:14.5px; font-weight:600; color:var(--soil); }
+  .al-meta{ font-size:12.5px; color:var(--soil-soft); font-family:var(--mono); }
+
+  #no-results{ text-align:center; padding:40px 0; color:var(--soil-soft); font-family:var(--mono); font-size:14px; }
+
+  .contact-row{ display:flex; flex-wrap:wrap; gap:40px; margin-top:20px; }
+  .contact-item{ font-family:var(--mono); font-size:14px; }
+  .contact-item span{ display:block; color:var(--soil-soft); font-size:11px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:6px; }
+  .contact-item a{ text-decoration:none; color:var(--soil); border-bottom:1px solid var(--line); padding-bottom:2px; transition:border-color .2s, color .2s; }
+  .contact-item a:hover, .contact-item a:focus-visible{ border-color:var(--clay); color:var(--clay); }
+
+  .about-generation{
+    margin: 40px 0 0; padding: 16px 20px; border-left: 3px solid var(--clay);
+    background: var(--cream); font-size: 0.85em; color: var(--soil-soft); border-radius: 0 8px 8px 0;
+  }
+  .about-generation strong{ color:var(--soil); }
+
+  footer{ padding:36px 0; border-top:1px solid var(--line); font-family:var(--mono); font-size:12px; color:var(--soil-soft); }
+  footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+  @media (max-width:600px){
+    .section-title{ white-space:normal; }
+    .node-sep{ display:none; }
+  }
+</style>
+<style>
+  .nav-toggle{display:none;border:1px solid var(--line);background:var(--cream);border-radius:8px;padding:8px 10px;font:600 12px var(--mono);color:var(--soil)}
+  .publication-link{display:block;text-decoration:none;border-radius:12px;color:inherit}
+  .publication-link:focus-visible{outline:3px solid var(--clay);outline-offset:4px}
+  .publication-link .proj-card{height:100%}
+  .publication-arrow{margin-top:auto;font:500 12px var(--mono);color:var(--clay)}
+  .training-intro{max-width:720px;color:var(--soil-soft);margin:-16px 0 28px}
+  .training-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .training-card{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px;transition:.25s ease}
+  .training-card:hover{transform:translateY(-3px);border-color:var(--olive);box-shadow:0 10px 25px rgba(59,42,26,.07)}
+  .training-hours{font:600 27px var(--display);color:var(--clay)}
+  .training-hours small{font:500 12px var(--mono);color:var(--soil-soft)}
+  .training-card h4{font:600 18px var(--display);margin:4px 0 7px}
+  .training-card p{font-size:13px;color:var(--soil-soft)}
+  .training-card details{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+  .training-card summary{cursor:pointer;font:500 12px var(--mono);color:var(--olive)}
+  .course-mini{padding:10px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+  .course-mini:last-child{border-bottom:0}.course-mini span{display:block;color:var(--soil-soft);font-size:11.5px}
+  @media(max-width:820px){nav .wrap{height:58px}.nav-toggle{display:block}.navlinks{display:none;position:absolute;left:18px;right:18px;top:58px;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:0 14px 34px rgba(59,42,26,.12)}.navlinks.open{display:grid;gap:4px}.navlinks a{display:block;padding:9px}.training-grid{grid-template-columns:1fr}header.hero{padding:68px 0 50px}.hero-links{gap:8px}.hero-links a{padding:8px 11px}.search-wrap{margin-top:30px}section{padding:58px 0}.section-head{margin-bottom:28px}.wrap{padding:0 18px}}
+  @media(max-width:480px){h1.name{font-size:42px}.eyebrow{font-size:10px}.about-grid{gap:30px}.proj-card{padding:20px}.contact-row{gap:24px}.search-box{align-items:flex-start}#search-count{display:none}}
+</style></head>
+<body>
+<nav>
+<div class="wrap">
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button">Menú</button><a class="brand" href="#top"><span class="dot"></span>Pablo Ibáñez-Porras</a>
+<ul class="navlinks" id="main-nav">
+<li><a href="#sobre-mi">Sobre mí</a></li>
+<li><a href="#experiencia">Formación y Experiencia</a></li>
+<li><a href="#publicaciones">Publicaciones</a></li>
+<li><a href="#actividad">Actividad Académica</a></li>
+<li><a href="#habilidades">Habilidades</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</div>
+</nav>
+<header class="hero" id="top">
+<svg aria-hidden="true" class="bg-graph" id="bgGraph" preserveaspectratio="xMidYMid slice" viewbox="0 0 1000 460">
+<g class="bg-drift" id="bgDrift"><g id="bgHover"></g></g>
+</svg>
+<div class="wrap">
+<div class="eyebrow">Investigador predoctoral en CISA-INIA-CSIC</div>
+<h1 class="name"><span class="word">Pablo</span> <span class="word">Ibáñez-Porras</span></h1>
+<p class="role">Enfoque aplicado de la física y las matemáticas al sector agrotecnológico mediante modelización matemática y aplicación de algoritmos GIS.</p>
+<div class="hero-links">
+<a href="mailto:pablo.ibanez@inia.csic.es">pablo.ibanez@inia.csic.es</a>
+<a href="https://www.linkedin.com/in/pablo-ip" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://orcid.org/0009-0004-0618-8646" rel="noopener" target="_blank">ORCID</a>
+<a href="https://www.researchgate.net/profile/Pablo-Ibanez-Porras" rel="noopener" target="_blank">ResearchGate</a>
+<a href="https://scholar.google.es/citations?user=KIKnnSYAAAAJ&amp;hl" rel="noopener" target="_blank">Google Scholar</a>
+<a href="https://storymaps.arcgis.com/stories/7a76b3329ef0490c9ec07db7ac4d395c" rel="noopener" target="_blank">StoryMap</a>
+<a download="" href="CV%20Pablo%20Ib%C3%A1%C3%B1ez-Porras.pdf">Descargar CV en PDF</a>
+</div>
+<div class="search-wrap">
+<div class="search-label">Buscar en este CV (112 actividades registradas)</div>
+<div class="search-box">
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+<input autocomplete="off" id="search" placeholder="Ej: influenza aviar, ArcGIS, epidemiología…" type="text"/>
+<span id="search-count"></span>
+</div>
+</div>
+</div>
+</header>
+<section id="sobre-mi">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">01</span>
+<h2 class="section-title">Sobre mí</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div class="about-grid">
+<div class="reveal">
+<p>Investigador predoctoral en el Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC), especializado en epidemiología espacial y sistemas de vigilancia en tiempo real para enfermedades emergentes bajo el enfoque One Health. Combina su formación en Física y Modelización Matemática con herramientas SIG, ciencia de datos y aprendizaje automático para el desarrollo de sistemas de alerta temprana frente a la influenza aviar y otras enfermedades transfronterizas, con proyectos como DiFLUsion, ProtectIA y SMARTe.</p>
+<p>Enfoque aplicado de la física y las matemáticas al sector agrotecnológico mediante modelización matemática y aplicación de algoritmos GIS.</p>
+</div>
+<div class="stat-list reveal">
+<div class="stat"><b data-count="7">0</b><span>Años de trayectoria académica y profesional</span></div>
+<div class="stat"><b data-count="12">0</b><span>Publicaciones científicas</span></div>
+<div class="stat"><b data-count="38">0</b><span>Congresos, conferencias y seminarios</span></div>
+</div>
+</div>
+</div>
+</section>
+<section class="alt" id="experiencia">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">02</span>
+<h2 class="section-title">Formación y Experiencia</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div class="timeline" id="timeline">
+<div class="tl-item reveal" data-search="doctorado en ingeniería informática (en curso) universidad de salamanca programa codirigido por irene iglesias (centro de investigación en sanidad animal, cisa-inia-csic) y ángel martín del rey (instituto universitario de física fundamental y matemáticas, iuffym-usal). desarrollo de un marco matemático basado en redes complejas y epidemiología para evaluar la propagación de agentes infecciosos a través de redes considerando un riesgo externo. formacion academica">
+<div class="tl-dot"></div>
+<div class="tl-period">2025 - actualidad</div>
+<div class="tl-role">Doctorado en Ingeniería Informática (en curso)</div>
+<div class="tl-org">Universidad de Salamanca</div>
+<div class="tl-desc">Programa codirigido por Irene Iglesias (Centro de Investigación en Sanidad Animal, CISA-INIA-CSIC) y Ángel Martín del Rey (Instituto Universitario de Física Fundamental y Matemáticas, IUFFYM-USAL). Desarrollo de un marco matemático basado en redes complejas y epidemiología para evaluar la propagación de agentes infecciosos a través de redes considerando un riesgo externo.</div>
+<div class="tags"><span class="tag">Formación académica</span></div>
+</div>
+<div class="tl-item reveal" data-search="creación de modelos, visores y aplicaciones para la evaluación rápida de riesgos frente a la aparición de patógenos centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por european partnership on animal health and welfare (2024-2027) contratado proyecto experiencia">
+<div class="tl-dot"></div>
+<div class="tl-period">2024 — 2027</div>
+<div class="tl-role">Creación de modelos, visores y aplicaciones para la evaluación rápida de riesgos frente a la aparición de patógenos</div>
+<div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
+<div class="tl-desc">Contrato financiado por European Partnership on Animal Health and Welfare (2024-2027)</div>
+<div class="tags"><span class="tag">Contratado</span></div>
+</div>
+<div class="tl-item reveal" data-search="modelo de cálculo de coste-beneficio de la vacunación temprana en jabalí silvestre ante la aparición de brotes de peste porcina africana (ppa) centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por proyecto vacdiva (2023-2024) contratado proyecto experiencia">
+<div class="tl-dot"></div>
+<div class="tl-period">2023 — 2024</div>
+<div class="tl-role">Modelo de cálculo de coste-beneficio de la vacunación temprana en jabalí silvestre ante la aparición de brotes de Peste Porcina Africana (PPA)</div>
+<div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
+<div class="tl-desc">Contrato financiado por Proyecto VACDIVA (2023-2024)</div>
+<div class="tags"><span class="tag">Contratado</span></div>
+</div>
+<div class="tl-item reveal" data-search="mejora del sistema de alertas diflusion de introducción de influenza aviar por aves silvestres en españa y desarrollo de la herramienta protectia de análisis de riesgo de introducción de la enfermedad en explotaciones avícolas centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por encomienda de gestión del ministerio de agricultura, pesca y alimentación (2022-2023) contratado proyecto experiencia">
+<div class="tl-dot"></div>
+<div class="tl-period">2022 — 2023</div>
+<div class="tl-role">Mejora del sistema de alertas DiFLUsion de introducción de Influenza Aviar por aves silvestres en España y desarrollo de la herramienta ProtectIA de análisis de riesgo de introducción de la enfermedad en explotaciones avícolas</div>
+<div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
+<div class="tl-desc">Contrato financiado por Encomienda de Gestión del Ministerio de Agricultura, Pesca y Alimentación (2022-2023)</div>
+<div class="tags"><span class="tag">Contratado</span></div>
+</div>
+<div class="tl-item reveal" data-search='máster universitario en modelización matemática universidad de salamanca tfm: "modelo de propagación de epidemias entre comunidades definidas sobre redes complejas considerando flujo poblacional". formacion academica'>
+<div class="tl-dot"></div>
+<div class="tl-period">2021</div>
+<div class="tl-role">Máster Universitario en Modelización Matemática</div>
+<div class="tl-org">Universidad de Salamanca</div>
+<div class="tl-desc">TFM: "Modelo de propagación de epidemias entre comunidades definidas sobre redes complejas considerando flujo poblacional". · <a href="https://gredos.usal.es/handle/10366/150383" rel="noopener" style="text-decoration:underline;" target="_blank">Ver trabajo</a></div>
+<div class="tags"><span class="tag">Formación académica</span></div>
+</div>
+<div class="tl-item reveal" data-search="modelización de la interacción de haces de protones con distintos objetivos utilizando fluka (software de simulación de interacciones de partículas basado en el método montecarlo) centro de láseres pulsados ultracortos y ultraintensos (clpu) prácticas de grado proyecto experiencia">
+<div class="tl-dot"></div>
+<div class="tl-period">2021</div>
+<div class="tl-role">Modelización de la interacción de haces de protones con distintos objetivos utilizando FLUKA (software de simulación de interacciones de partículas basado en el método Montecarlo)</div>
+<div class="tl-org">Centro de Láseres Pulsados Ultracortos y Ultraintensos (CLPU)</div>
+<div class="tags"><span class="tag">Prácticas de grado</span></div>
+</div>
+<div class="tl-item reveal" data-search='grado en física universidad de salamanca tfg: "redes complejas: descripción, análisis y aplicaciones". formacion academica'>
+<div class="tl-dot"></div>
+<div class="tl-period">2020</div>
+<div class="tl-role">Grado en Física</div>
+<div class="tl-org">Universidad de Salamanca</div>
+<div class="tl-desc">TFG: "Redes complejas: Descripción, análisis y aplicaciones". · <a href="https://gredos.usal.es/handle/10366/143828" rel="noopener" style="text-decoration:underline;" target="_blank">Ver trabajo</a></div>
+<div class="tags"><span class="tag">Formación académica</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="publicaciones">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">03</span>
+<h2 class="section-title">Publicaciones</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div class="proj-grid" id="projects">
+<a aria-label="Abrir publicación: Molecular surveillance of flaviviruses in wild cetaceans from Brazil." class="publication-link" href="https://doi.org/10.7589/JWD-D-25-00149" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="molecular surveillance of flaviviruses in wild cetaceans from brazil. duarte-benvenuto a, sacristán c, ewbank ac, costa-silva s, groch kr, díaz-delgado j, ibáñez-porras p, colosio ac, da cunha gomes ramos h, carvalho vl, ribeiro vl, bertozzi cp, pessi cf, gravena w, da silva vmf, marmontel m, marigo j, catão-dias jl. journal of wildlife diseases, 62(2):482-488 publicacion">
+<div class="proj-kind">Publicación · 2026</div>
+<div class="proj-title">Molecular surveillance of flaviviruses in wild cetaceans from Brazil.</div>
+<div class="proj-desc">Duarte-Benvenuto A, Sacristán C, Ewbank AC, Costa-Silva S, Groch KR, Díaz-Delgado J, Ibáñez-Porras P, Colosio AC, da Cunha Gomes Ramos H, Ca… · Journal of Wildlife Diseases, 62(2):482-488 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: Development of a dashboard for monitoring and risk assessment of highly pathogenic avian influenza in Kazakhstan." class="publication-link" href="https://doi.org/10.51452/cajvs.2026.2(014).2224" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="development of a dashboard for monitoring and risk assessment of highly pathogenic avian influenza in kazakhstan. abdrakhmanov, s.k., iglesias, i., ibañez-porras, p., mukhanbetkaliyev, y.y., mukhanbetkaliyeva, a.a., ruzmatov, s.i., kadyrov, a.s., balgabekova, k.t. central asian journal of veterinary science, 2(014), 63-70 publicacion">
+<div class="proj-kind">Publicación · 2026</div>
+<div class="proj-title">Development of a dashboard for monitoring and risk assessment of highly pathogenic avian influenza in Kazakhstan.</div>
+<div class="proj-desc">Abdrakhmanov, S.K., Iglesias, I., Ibañez-Porras, P., Mukhanbetkaliyev, Y.Y., Mukhanbetkaliyeva, A.A., Ruzmatov, S.I., Kadyrov, A.S., Balgabe… · Central Asian Journal of Veterinary Science, 2(014), 63-70 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: WiBISS: A tool to estimate avoided lost revenue of African swine fever wild boar vaccination at municipality level." class="publication-link" href="https://doi.org/10.3389/fvets.2025.1667173" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="wibiss: a tool to estimate avoided lost revenue of african swine fever wild boar vaccination at municipality level. ibañez-porras, p., bosch, j., feliziani, f., maresca, c., sanchez-vizcaino, j. m., iglesias, i., et al., martinez aviles, m. frontiers in veterinary science, 12, 1667173 publicacion">
+<div class="proj-kind">Publicación · 2025</div>
+<div class="proj-title">WiBISS: A tool to estimate avoided lost revenue of African swine fever wild boar vaccination at municipality level.</div>
+<div class="proj-desc">Ibañez-Porras, P., Bosch, J., Feliziani, F., Maresca, C., Sanchez-Vizcaino, J. M., Iglesias, I., et al., Martinez Aviles, M. · Frontiers in Veterinary Science, 12, 1667173 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: Risk Assessment of Highly Pathogenic Avian Influenza (HPAI) in Wild Bird Species in Kazakhstan." class="publication-link" href="https://doi.org/10.51585/gjvr.2025.3.0149" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="risk assessment of highly pathogenic avian influenza (hpai) in wild bird species in kazakhstan. iglesias, i., ruzmatov, s., ibañez-porras, p., kadyrov, a., bakishev, t., korennoy, f., perez, a., abdrakhmanov, s. german journal of veterinary research publicacion">
+<div class="proj-kind">Publicación · 2025</div>
+<div class="proj-title">Risk Assessment of Highly Pathogenic Avian Influenza (HPAI) in Wild Bird Species in Kazakhstan.</div>
+<div class="proj-desc">Iglesias, I., Ruzmatov, S., Ibañez-Porras, P., Kadyrov, A., Bakishev, T., Korennoy, F., Perez, A., Abdrakhmanov, S. · German Journal of Veterinary Research </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: Novel alpha-, beta-, and gammaherpesviruses in Neotropical carnivores of Brazil." class="publication-link" href="https://doi.org/10.1155/2024/1347516" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="novel alpha-, beta-, and gammaherpesviruses in neotropical carnivores of brazil. ewbank ac, catão-dias jl, navas-suarez pe, duarte-benvenuto a, zamana-ramblas r, ferreira-machado e, christino lial h, ibañez-porras p, sacristán i, sacristán c. transboundary and emerging diseases, 2024, 1347516 publicacion">
+<div class="proj-kind">Publicación · 2024</div>
+<div class="proj-title">Novel alpha-, beta-, and gammaherpesviruses in Neotropical carnivores of Brazil.</div>
+<div class="proj-desc">Ewbank AC, Catão-Dias JL, Navas-Suarez PE, Duarte-Benvenuto A, Zamana-Ramblas R, Ferreira-Machado E, Christino Lial H, Ibañez-Porras P, Sacr… · Transboundary and Emerging Diseases, 2024, 1347516 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: DiFLUsion: A novel space-time alert system for HPAI." class="publication-link" href="https://doi.org/10.51585/gjvr.2024.4.0107" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="diflusion: a novel space-time alert system for hpai. ibáñez-porras, p., de la torre, a., gómez-pérez, j. i., tomás-tenllado, c., garcía, e., cáceres, g., pérez, a., iglesias, i. german journal of veterinary research, 4(4), 31-42 publicacion">
+<div class="proj-kind">Publicación · 2024</div>
+<div class="proj-title">DiFLUsion: A novel space-time alert system for HPAI.</div>
+<div class="proj-desc">Ibáñez-Porras, P., de la Torre, A., Gómez-Pérez, J. I., Tomás-Tenllado, C., García, E., Cáceres, G., Pérez, A., Iglesias, I. · German Journal of Veterinary Research, 4(4), 31-42 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: Novel epidemiologic features of highly pathogenic avian influenza virus A H5N1 2.3.3.4b panzootic: a review." class="publication-link" href="https://doi.org/10.1155/2024/5322378" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="novel epidemiologic features of highly pathogenic avian influenza virus a h5n1 2.3.3.4b panzootic: a review. sacristán c, ewbank ac, ibáñez porras p, pérez ramírez e, de la torre a, briones v, iglesias i. transboundary and emerging diseases, 2024, 5322378 publicacion">
+<div class="proj-kind">Publicación · 2024</div>
+<div class="proj-title">Novel epidemiologic features of highly pathogenic avian influenza virus A H5N1 2.3.3.4b panzootic: a review.</div>
+<div class="proj-desc">Sacristán C, Ewbank AC, Ibáñez Porras P, Pérez Ramírez E, de la Torre A, Briones V, Iglesias I. · Transboundary and Emerging Diseases, 2024, 5322378 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<a aria-label="Abrir publicación: Bacterial septicemia and herpesvirus infection in Antarctic fur seals (Arctocephalus gazella) stranded in the São Paulo coast, Brazil." class="publication-link" href="https://doi.org/10.1007/s11259-024-10408-x" rel="noopener" target="_blank"><div class="proj-card reveal" data-search="bacterial septicemia and herpesvirus infection in antarctic fur seals (arctocephalus gazella) stranded in the são paulo coast, brazil. duarte-benvenuto a, sánchez-sarmiento am, ewbank ac, zamana-ramblas r, costa-silva s, silvestre n, faita t, keid lb, soares rm, pessi cf, sabbadini jr, borges mf, ferioli rb, marcon m, barbosa cb, fernandes ncca, ibáñez-porras p, navas-suárez pe, catão-dias jl, sacristán c. veterinary research communications, 48, 2819-2826 publicacion">
+<div class="proj-kind">Publicación · 2024</div>
+<div class="proj-title">Bacterial septicemia and herpesvirus infection in Antarctic fur seals (Arctocephalus gazella) stranded in the São Paulo coast, Brazil.</div>
+<div class="proj-desc">Duarte-Benvenuto A, Sánchez-Sarmiento AM, Ewbank AC, Zamana-Ramblas R, Costa-Silva S, Silvestre N, Faita T, Keid LB, Soares RM, Pessi CF, Sa… · Veterinary Research Communications, 48, 2819-2826 </div>
+<span class="publication-arrow">Abrir publicación ↗</span></div></a>
+<div class="proj-card reveal" data-search="molecular detection and characterization of mycoplasma spp. in marine mammals from brazil duarte-benvenuto et al. (incl. ibáñez-porras, p.) emerging infectious diseases / (ver revista exacta en pdf) publicacion">
+<div class="proj-kind">Publicación · noviembre 2023</div>
+<div class="proj-title">Molecular Detection and Characterization of Mycoplasma spp. in Marine Mammals from Brazil</div>
+<div class="proj-desc">Duarte-Benvenuto et al. (incl. Ibáñez-Porras, P.) · Emerging Infectious Diseases / (ver revista exacta en PDF)</div>
+</div>
+<div class="proj-card reveal" data-search="dashfluboard: a web-based tool for assessing and predicting global spread of highly pathogenic avian influenza in near real time iglesias irene; lim seunghyun,. de la torre ana, kanankege kaushi, ibañez pablo, fillman kathryn, blanco carlos e, perez andres m esrinews publicacion">
+<div class="proj-kind">Publicación · octubre 2023</div>
+<div class="proj-title">DashFLUboard: a web-based tool for assessing and predicting global spread of highly pathogenic avian influenza in near real time</div>
+<div class="proj-desc">Iglesias Irene; Lim Seunghyun,. de la Torre Ana, Kanankege Kaushi, Ibañez Pablo, Fillman Kathryn, Blanco Carlos E, Perez Andres M · EsriNews</div>
+</div>
+<div class="proj-card reveal" data-search="influenza aviar: cambios en la dinámica de la enfermedad y cómo anticiparnos a ella mediante sistemas de vigilancia a tiempo real irene iglesias, elena garcía, germán cáceres, pablo ibañez, josé ignacio gómez, christian tomas-tenllado,carlos eduardo blanco urbina, ana de la torre avinews publicacion">
+<div class="proj-kind">Publicación · mayo 2023</div>
+<div class="proj-title">Influenza Aviar: cambios en la dinámica de la enfermedad y cómo anticiparnos a ella mediante sistemas de vigilancia a tiempo real</div>
+<div class="proj-desc">Irene Iglesias, Elena García, Germán Cáceres, Pablo Ibañez, José Ignacio Gómez, Christian Tomas-Tenllado,Carlos Eduardo Blanco Urbina, Ana d… · Avinews</div>
+</div>
+<div class="proj-card reveal" data-search="molecular detection and characterization of mycoplasma spp. in marine mammals from brazil. duarte-benvenuto a, et al. (incl. ibáñez-porras, p.) (ver revista exacta en pdf de certificado) publicacion">
+<div class="proj-kind">Publicación · 2023</div>
+<div class="proj-title">Molecular Detection and Characterization of Mycoplasma spp. in Marine Mammals from Brazil.</div>
+<div class="proj-desc">Duarte-Benvenuto A, et al. (incl. Ibáñez-Porras, P.) · (ver revista exacta en PDF de certificado)</div>
+</div>
+</div>
+</div>
+</section>
+<section class="alt" id="actividad">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">04</span>
+<h2 class="section-title">Actividad Académica</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div id="actividad-lista">
+<div class="al-group">
+<h3 class="al-heading">Congresos y Conferencias <span class="al-count">(31)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="smarte: una interfaz espacial para la vigilancia ambiental estandarizada mediante amr oral · jornada tecnología geográfica (jtg) en csic 2026: innovación, análisis y ciencia · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">SMARTe: Una interfaz espacial para la vigilancia ambiental estandarizada mediante AMR</div>
+<div class="al-meta">Oral · Jornada Tecnología Geográfica (JTG) en CSIC 2026: Innovación, Análisis y Ciencia · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="miembro del comité organizador (young scientists committee) rol organizativo · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">Miembro del Comité Organizador (Young Scientists Committee)</div>
+<div class="al-meta">Rol organizativo · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="datohs: a modular data ecosystem for interoperable one health surveillance and risk assessment. oral · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">DatOHs: A modular data ecosystem for interoperable One Health surveillance and risk assessment.</div>
+<div class="al-meta">Oral · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="smart-e: a spatial digital framework for standardized environmental amr surveillance oral · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">SMART-E: A Spatial Digital Framework for Standardized Environmental AMR Surveillance</div>
+<div class="al-meta">Oral · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="from science to policy: co-developing a real-time one health early warning system for avian influenza (diflusion) póster · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">From Science to Policy: Co-developing a Real-Time One Health Early Warning System for Avian Influenza (DiFLUsion)</div>
+<div class="al-meta">Póster · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="ecological risk prioritization of wild birds for hpai h5n1 surveillance in panama póster · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">Ecological risk prioritization of wild birds for HPAI H5N1 surveillance in Panama</div>
+<div class="al-meta">Póster · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="passerine migration as a hidden pathway of antimicrobial resistance connectivity in south america póster · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">Passerine Migration as a Hidden Pathway of Antimicrobial Resistance Connectivity in South America</div>
+<div class="al-meta">Póster · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="mountain sentinels: the pyrenean capercaillie (tetrao urogallus aquitanicus) as an indicator of environmental antibiotic contamination in the pyrenees, northeastern spain póster · european one health association annual scientific meeting 2026 (eoha 2026) · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">Mountain sentinels: The Pyrenean capercaillie (Tetrao urogallus aquitanicus) as an indicator of environmental antibiotic contamination in the Pyrenees, northeastern Spain</div>
+<div class="al-meta">Póster · European One Health Association Annual Scientific Meeting 2026 (EOHA 2026) · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="protectia: herramienta multicriterio para la priorización del riesgo de influenza aviar en comarcas ganaderas oral · jornada científica desafío gripes zoonóticas · madrid · mayo 2026 congreso conferencia">
+<div class="al-title">ProtectIA: Herramienta multicriterio para la priorización del riesgo de influenza aviar en comarcas ganaderas</div>
+<div class="al-meta">Oral · Jornada Científica Desafío Gripes Zoonóticas · Madrid · mayo 2026</div>
+</div>
+<div class="al-row reveal" data-search="risk assessment of highly pathogenic avian influenza (hpai) in wild bird species in kazakhstan international scientific and practical conference · astana, república de kazajistán · abril 2026 congreso conferencia">
+<div class="al-title">Risk assessment of highly pathogenic avian influenza (hpai) in wild bird species in Kazakhstan</div>
+<div class="al-meta">International Scientific and Practical Conference · Astana, República de Kazajistán · abril 2026</div>
+</div>
+<div class="al-row reveal" data-search="asf frontwave: a rapid risk assessment interactive mapping tool póster · svepm conference 2026+ · londres, uk · marzo 2026 congreso conferencia">
+<div class="al-title">ASF FrontWave: A Rapid Risk Assessment interactive mapping tool</div>
+<div class="al-meta">Póster · SVEPM Conference 2026+ · Londres, UK · marzo 2026</div>
+</div>
+<div class="al-row reveal" data-search="análisis de datos en epidemiología oral · ciclos de webinar ui1 · online · noviembre 2025 congreso conferencia">
+<div class="al-title">Análisis de datos en epidemiología</div>
+<div class="al-meta">Oral · Ciclos de webinar UI1 · Online · noviembre 2025</div>
+</div>
+<div class="al-row reveal" data-search="mapeo de las fuentes de emisión antropogénicas de amr oral · conferencia esri españa 2026 · madrid · octubre 2025 congreso conferencia">
+<div class="al-title">Mapeo de las fuentes de emisión antropogénicas de AMR</div>
+<div class="al-meta">Oral · Conferencia Esri España 2026 · Madrid · octubre 2025</div>
+</div>
+<div class="al-row reveal" data-search="data science aplicada a la vigilancia de influenza aviar en kazajstan oral · conferencia esri españa 2026 · madrid · octubre 2025 congreso conferencia">
+<div class="al-title">Data science aplicada a la vigilancia de influenza aviar en Kazajstan</div>
+<div class="al-meta">Oral · Conferencia Esri España 2026 · Madrid · octubre 2025</div>
+</div>
+<div class="al-row reveal" data-search="protectia: herramienta geoespacial para la prevención de la influenza aviar oral · iv jornadas internacionales de jóvenes investigadores innova-salamanca · salamanca · septiembre 2025 congreso conferencia">
+<div class="al-title">ProtectIA: Herramienta geoespacial para la prevención de la influenza aviar</div>
+<div class="al-meta">Oral · IV Jornadas Internacionales de Jóvenes Investigadores INNOVA-Salamanca · Salamanca · septiembre 2025</div>
+</div>
+<div class="al-row reveal" data-search="mountain sentinels: the pyrenean capercaillie (tetrao urogallus aquitanicus) as an indicator of environmental antibiotic contamination in the pyrenees, northeastern spain oral · vii conferencia bienal wda latinoamérica · federal university of minas gerais, belo horizonte, mg, brazil. · septiembre 2025 congreso conferencia">
+<div class="al-title">Mountain sentinels: The Pyrenean capercaillie (Tetrao urogallus aquitanicus) as an indicator of environmental antibiotic contamination in the Pyrenees, northeastern Spain</div>
+<div class="al-meta">Oral · VII Conferencia Bienal WDA Latinoamérica · Federal University of Minas Gerais, Belo Horizonte, MG, Brazil. · septiembre 2025</div>
+</div>
+<div class="al-row reveal" data-search="antibiotic resistance genes of public health relevance in wild ungulates of andalusia, southern spain poster · vii conferencia bienal wda latinoamérica · federal university of minas gerais, belo horizonte, mg, brazil. · septiembre 2025 congreso conferencia">
+<div class="al-title">Antibiotic resistance genes of public health relevance in wild ungulates of Andalusia, southern Spain</div>
+<div class="al-meta">Poster · VII Conferencia Bienal WDA Latinoamérica · Federal University of Minas Gerais, Belo Horizonte, MG, Brazil. · septiembre 2025</div>
+</div>
+<div class="al-row reveal" data-search="herramientas de geoprocesamiento como ayuda a enfermedades emergentes oral · i congreso interdisciplinar de medicina e ingeniería · burgos · septiembre 2025 congreso conferencia">
+<div class="al-title">Herramientas de geoprocesamiento como ayuda a enfermedades emergentes</div>
+<div class="al-meta">Oral · I Congreso Interdisciplinar de Medicina e Ingeniería · Burgos · septiembre 2025</div>
+</div>
+<div class="al-row reveal" data-search="the overlooked role of passeriformes in avian influenza and antimicrobial resistance amid climate change poster · ii congreso nacional one health 2025 · madrid · mayo 2025 congreso conferencia">
+<div class="al-title">The overlooked role of Passeriformes in avian influenza and antimicrobial resistance amid climate change</div>
+<div class="al-meta">Poster · II Congreso Nacional One Health 2025 · Madrid · mayo 2025</div>
+</div>
+<div class="al-row reveal" data-search="wibiss: a tool to estimate economic benefits of african swine fever wild boar vaccination for pig producers poster · gara scientific meeting · rome (italy) · abril 2025 congreso conferencia">
+<div class="al-title">WiBISS: A tool to estimate economic benefits of African swine fever wild boar vaccination for pig producers</div>
+<div class="al-meta">Poster · GARA Scientific Meeting · Rome (Italy) · abril 2025</div>
+</div>
+<div class="al-row reveal" data-search="diflusion: a tool for surveillance against avian influenza oral · 2ª asamblea general de la conexión csic de biología computacional y bioinformática (conexión bcb) · madrid · marzo 2025 congreso conferencia">
+<div class="al-title">DiFLUsion: a tool for surveillance against Avian Influenza</div>
+<div class="al-meta">Oral · 2ª Asamblea general de la Conexión CSIC de Biología Computacional y Bioinformática (Conexión BCB) · Madrid · marzo 2025</div>
+</div>
+<div class="al-row reveal" data-search="epidemiología y análisis espacial: aplicación de los sig para entender la dinámica de las enfermedades y para la gestión de la salud pública y animal con una perspectiva one health oral · conferencia esri españa 2024 · madrid (ifema) · octubre 2024 congreso conferencia">
+<div class="al-title">Epidemiología y análisis espacial: Aplicación de los SIG para entender la dinámica de las enfermedades y para la gestión de la salud pública y animal con una perspectiva One Health</div>
+<div class="al-meta">Oral · Conferencia Esri España 2024 · Madrid (IFEMA) · octubre 2024</div>
+</div>
+<div class="al-row reveal" data-search="análisis espacial de poblaciones de cotorras argentinas en madrid coautor · reunión científica see / congreso ape 2024 · cádiz · septiembre 2024 congreso conferencia">
+<div class="al-title">Análisis espacial de poblaciones de cotorras argentinas en Madrid</div>
+<div class="al-meta">Coautor · Reunión Científica SEE / Congreso APE 2024 · Cádiz · septiembre 2024</div>
+</div>
+<div class="al-row reveal" data-search="dinámica de la influenza aviar en mamíferos, un nuevo reto de salud global coautor · reunión científica see / congreso ape 2024 · cádiz · septiembre 2024 congreso conferencia">
+<div class="al-title">Dinámica de la influenza aviar en mamíferos, un nuevo reto de salud global</div>
+<div class="al-meta">Coautor · Reunión Científica SEE / Congreso APE 2024 · Cádiz · septiembre 2024</div>
+</div>
+<div class="al-row reveal" data-search="contaminación de suelos por antibióticos y genes de resistencia a antimicrobianos póster · x simposio condegres · burgos · junio 2024 congreso conferencia">
+<div class="al-title">Contaminación de suelos por antibióticos y genes de resistencia a antimicrobianos</div>
+<div class="al-meta">Póster · X Simposio CONDEGRES · Burgos · junio 2024</div>
+</div>
+<div class="al-row reveal" data-search="marinestrandingviewer: an online tool to record marine mammal strandings póster (coautor) · iaaam 55th annual conference · galway (irlanda) · mayo 2024 congreso conferencia">
+<div class="al-title">MarineStrandingViewer: An Online Tool to Record Marine Mammal Strandings</div>
+<div class="al-meta">Póster (coautor) · IAAAM 55th Annual Conference · Galway (Irlanda) · mayo 2024</div>
+</div>
+<div class="al-row reveal" data-search="european dashfluboard: aplicación de los sig frente a la influenza aviar oral · conferencia esri españa  · octubre 2023 congreso conferencia">
+<div class="al-title">European DashFLUboard: Aplicación de los SIG frente a la Influenza Aviar</div>
+<div class="al-meta">Oral · Conferencia ESRI España  · octubre 2023</div>
+</div>
+<div class="al-row reveal" data-search="sistema de alerta a tiempo real para influenza aviar: diflusion póster · jornadas vigilancia sanitaria 2023: presente y futuro para 2030  · julio 2023 congreso conferencia">
+<div class="al-title">Sistema de alerta a tiempo real para influenza aviar: DiFLUsion</div>
+<div class="al-meta">Póster · Jornadas Vigilancia Sanitaria 2023: presente y futuro para 2030  · julio 2023</div>
+</div>
+<div class="al-row reveal" data-search="hormigas, gallinas y matemáticas oral · iniaciando ciencia  · abril 2023 congreso conferencia">
+<div class="al-title">Hormigas, gallinas y matemáticas</div>
+<div class="al-meta">Oral · INIAciando ciencia  · abril 2023</div>
+</div>
+<div class="al-row reveal" data-search="sistema de vigilancia de influenza aviar diflusion: aplicación directa de los datos de los programas de ciencia ciudadana de seo/birdlife póster · congreso español de ornitología · noviembre 2022 congreso conferencia">
+<div class="al-title">Sistema de vigilancia de influenza aviar DiFLUsion: aplicación directa de los datos de los programas de Ciencia Ciudadana de SEO/BirdLife</div>
+<div class="al-meta">Póster · Congreso Español de Ornitología · noviembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="asistencia a la conferencia esri españa 2022 presencial · conferencia esri españa 2022 · octubre 2022 congreso conferencia">
+<div class="al-title">Asistencia a la Conferencia Esri España 2022</div>
+<div class="al-meta">Presencial · Conferencia Esri España 2022 · octubre 2022</div>
+</div>
+</div>
+</div>
+<div class="al-group" data-search="cursos formación GIS matemáticas IA One Health programación"><h3 class="al-heading">Formación continua por especialidad</h3><p class="training-intro">Resumen selectivo de la formación acreditada. Las horas son mínimos confirmados: no se suman cursos cuyo certificado no especifica duración.</p><div class="training-grid"><article class="training-card" data-search="GIS y teledetección Flujos de trabajo con ArcGIS Online FME y bases de datos Desarrollo web con ArcGIS API para JavaScript Scripts de geoprocesamiento con Python en ArcGIS Pro Desarrollo de aplicaciones con ArcGIS Experience Builder Compartir información en ArcGIS Hub Taller de Big Data y GeoAnalytics Crear aplicaciones web con Web AppBuilder Compartir contenido online usando ArcGIS Creación de Story Maps con ArcGIS Gestión y análisis de imágenes con ArcGIS Pro Introducción a ArcGIS Dashboards Análisis espacial con ArcGIS Pro Edición de datos con ArcGIS Pro Gestión de datos espaciales con ArcGIS Pro Flujos de trabajo en ArcGIS Pro Análisis de la biodiversidad de especies y hábitats con QGIS, Google Earth Engine y OpenData Elaboración de modelos predictivos de distribución potencial de especies con MAXENT El análisis de la superficie terrestre mediante teledetección"><div class="training-hours">+388 <small>horas verificadas</small></div><h4>GIS y teledetección</h4><p>Especialización en ArcGIS Pro y Online, QGIS, Google Earth Engine, teledetección y desarrollo geoespacial.</p><details><summary>Ver 19 cursos</summary><div class="course-mini">Flujos de trabajo con ArcGIS Online<span>Esri España · 10 h</span></div><div class="course-mini">FME y bases de datos<span>Consejo Superior de Investigaciones Científicas (CSIC) · 8 h</span></div><div class="course-mini">Desarrollo web con ArcGIS API para JavaScript<span>Esri España · 25 h</span></div><div class="course-mini">Scripts de geoprocesamiento con Python en ArcGIS Pro<span>Esri España · 40 h</span></div><div class="course-mini">Desarrollo de aplicaciones con ArcGIS Experience Builder<span>Esri España · 15 h</span></div><div class="course-mini">Compartir información en ArcGIS Hub<span>Esri España · 5 h</span></div><div class="course-mini">Taller de Big Data y GeoAnalytics<span>Esri España · 5 h</span></div><div class="course-mini">Crear aplicaciones web con Web AppBuilder<span>Esri España · 5 h</span></div><div class="course-mini">Compartir contenido online usando ArcGIS<span>Esri España · 15 h</span></div><div class="course-mini">Creación de Story Maps con ArcGIS<span>Esri España · 5 h</span></div><div class="course-mini">Gestión y análisis de imágenes con ArcGIS Pro<span>Esri España · 10 h</span></div><div class="course-mini">Introducción a ArcGIS Dashboards<span>Esri España · 5 h</span></div><div class="course-mini">Análisis espacial con ArcGIS Pro<span>Esri España · 15 h</span></div><div class="course-mini">Edición de datos con ArcGIS Pro<span>Esri España · 15 h</span></div><div class="course-mini">Gestión de datos espaciales con ArcGIS Pro<span>Esri España · 15 h</span></div><div class="course-mini">Flujos de trabajo en ArcGIS Pro<span>Esri España · 20 h</span></div><div class="course-mini">Análisis de la biodiversidad de especies y hábitats con QGIS, Google Earth Engine y OpenData<span>GeoInnnova · 125 h</span></div><div class="course-mini">Elaboración de modelos predictivos de distribución potencial de especies con MAXENT<span>GeoInnova · 20 h</span></div><div class="course-mini">El análisis de la superficie terrestre mediante teledetección<span>Universidad de Burgos · 30 h</span></div></details></article><article class="training-card" data-search="IA, datos y programación Servicios sobre Docker Deep learning con KERAS para investigación científica Machine Learning para Investigación Científica - Random Forest, Boosting y Técnicas Avanzadas de Interpretación Machine Learning para Investigación Científica — Árboles de Clasificación y Regresión Introducción al análisis descriptivo e inferencial bivariado con JASP Python avanzado Introducción al API de Python Inteligencia Artificial y redes neuronales"><div class="training-hours">+179 <small>horas verificadas</small></div><h4>IA, datos y programación</h4><p>Especialización en aprendizaje automático aplicado a investigación, Python y flujos reproducibles.</p><details><summary>Ver 8 cursos</summary><div class="course-mini">Servicios sobre Docker<span>CSIC (Plan de Formación) · 20 h</span></div><div class="course-mini">Deep learning con KERAS para investigación científica<span>Museo Nacional de Ciencias Naturales (MNCN-CSIC) · 21 h</span></div><div class="course-mini">Machine Learning para Investigación Científica - Random Forest, Boosting y Técnicas Avanzadas de Interpretación<span>Museo Nacional de Ciencias Naturales (MNCN-CSIC) · 24 h</span></div><div class="course-mini">Machine Learning para Investigación Científica — Árboles de Clasificación y Regresión<span>Museo Nacional de Ciencias Naturales (MNCN-CSIC) · 24 h</span></div><div class="course-mini">Introducción al análisis descriptivo e inferencial bivariado con JASP<span>Universidad de Salamanca (USAL) · 10 h</span></div><div class="course-mini">Python avanzado<span>CSIC · 40 h</span></div><div class="course-mini">Introducción al API de Python<span>Esri España · 10 h</span></div><div class="course-mini">Inteligencia Artificial y redes neuronales<span>BISITE (Universidad de Salamanca) · 30 h</span></div></details></article><article class="training-card" data-search="Matemáticas y modelización Adapted numerical methods for Differential Equations Métodos numéricos para la interacción láser-plasma"><div class="training-hours">+40 <small>horas verificadas</small></div><h4>Matemáticas y modelización</h4><p>Especialización en métodos numéricos y ecuaciones diferenciales.</p><details><summary>Ver 2 cursos</summary><div class="course-mini">Adapted numerical methods for Differential Equations<span>Universidad de Salamanca · 10 h</span></div><div class="course-mini">Métodos numéricos para la interacción láser-plasma<span>Centro de Láseres Pulsados Ultracortos y Ultraintensos (CLPU) · 30 h</span></div></details></article><article class="training-card" data-search="One Health y agrotecnología Digitalización: Agricultura 4.0 Training course on Risk analysis for transboundary animal disease control"><div class="training-hours">+60 <small>horas verificadas</small></div><h4>One Health y agrotecnología</h4><p>Especialización en análisis de riesgo sanitario y digitalización agropecuaria.</p><details><summary>Ver 2 cursos</summary><div class="course-mini">Digitalización: Agricultura 4.0<span>ITAGRA Formacion · 60 h</span></div><div class="course-mini">Training course on Risk analysis for transboundary animal disease control<span>World Organisation for Animal Health · duración no especificada</span></div></details></article><article class="training-card" data-search="Investigación y competencias transversales Cerca, ús i difusió de la informació científica Nociones básicas sobre la prevención de riesgos laborales en el CSIC Introducción a la investigación cualitativa Búsquedas bibliográficas, mapeo sistemático y revisión sistemática de la literatura Inglés específico: Meetings on line Formación Psicoemocional Proyecto #BIEM CSIC 360 Curso de Inglés B.2 Cómo planificar, estructurar, diseñar y exponer presentaciones y conferencias científicas"><div class="training-hours">+280 <small>horas verificadas</small></div><h4>Investigación y competencias transversales</h4><p>Especialización en comunicación científica, revisión bibliográfica, idiomas y competencias profesionales.</p><details><summary>Ver 8 cursos</summary><div class="course-mini">Cerca, ús i difusió de la informació científica<span>Universitat de les Illes Balears (Escola de Doctorat) · 30 h</span></div><div class="course-mini">Nociones básicas sobre la prevención de riesgos laborales en el CSIC<span>Consejo Superior de Investigaciones Científicas (CSIC) · duración no especificada</span></div><div class="course-mini">Introducción a la investigación cualitativa<span>Universidad de Salamanca (USAL) · 10 h</span></div><div class="course-mini">Búsquedas bibliográficas, mapeo sistemático y revisión sistemática de la literatura<span>Universidad de Salamanca (USAL) · 10 h</span></div><div class="course-mini">Inglés específico: Meetings on line<span>CSIC · 30 h</span></div><div class="course-mini">Formación Psicoemocional Proyecto #BIEM CSIC 360<span>Aspy · 25 h</span></div><div class="course-mini">Curso de Inglés B.2<span>Universidad Internacional Isabel I de Castilla · 150 h</span></div><div class="course-mini">Cómo planificar, estructurar, diseñar y exponer presentaciones y conferencias científicas<span>CSIC · 25 h</span></div></details></article></div></div>
+<div class="al-group">
+<h3 class="al-heading">Docencia <span class="al-count">(3)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="análisis de la distribución espacio-temporal de distintas enfermedades animales supervisión de prácticas externas · universidad ceu san pablo · mayo 2023 docencia">
+<div class="al-title">Análisis de la distribución espacio-temporal de distintas enfermedades animales</div>
+<div class="al-meta">Supervisión de prácticas externas · Universidad CEU San Pablo · mayo 2023</div>
+</div>
+<div class="al-row reveal" data-search="herramientas matemáticas aplicadas al suavizado temporal de rutas migratorias supervisión de trabajo de fin de grado · universidad complutense de madrid · mayo 2023 docencia">
+<div class="al-title">Herramientas matemáticas aplicadas al suavizado temporal de rutas migratorias</div>
+<div class="al-meta">Supervisión de Trabajo de Fin de Grado · Universidad Complutense de Madrid · mayo 2023</div>
+</div>
+<div class="al-row reveal" data-search="análisis de la distribución espacio-temporal de brotes de iaap en españa supervisión de prácticas externas · universidad complutense de madrid · noviembre 2022 docencia">
+<div class="al-title">Análisis de la distribución espacio-temporal de brotes de IAAP en España</div>
+<div class="al-meta">Supervisión de prácticas externas · Universidad Complutense de Madrid · noviembre 2022</div>
+</div>
+</div>
+</div>
+<div class="al-group">
+<h3 class="al-heading">Asesorías Científico-Técnicas <span class="al-count">(1)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="asesoría técnica sobre la situación de la influenza aviar de alta patogenicidad (iaap) subdirección general de sanidad e higiene animal y trazabilidad (ministerio de agricultura, pesca y alimentación) · octubre 2023, julio 2023, febrero 2023, julio 2022 asesoria">
+<div class="al-title">Asesoría técnica sobre la situación de la Influenza Aviar de Alta Patogenicidad (IAAP)</div>
+<div class="al-meta">Subdirección General de Sanidad e Higiene Animal y Trazabilidad (Ministerio de Agricultura, Pesca y Alimentación) · octubre 2023, julio 2023, febrero 2023, julio 2022</div>
+</div>
+</div>
+</div>
+<div class="al-group">
+<h3 class="al-heading">Divulgación Científica <span class="al-count">(6)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="detectives de epidemias: gallinas y matemáticas pint of science españa · burgos · mayo 2025 divulgacion">
+<div class="al-title">Detectives de epidemias: Gallinas y matemáticas</div>
+<div class="al-meta">Pint of Science España · Burgos · mayo 2025</div>
+</div>
+<div class="al-row reveal" data-search="tutor del programa científic@s en prácticas aeac / csic - cisa · madrid · junio 2024 divulgacion">
+<div class="al-title">Tutor del Programa Científic@s en Prácticas</div>
+<div class="al-meta">AEAC / CSIC - CISA · Madrid · junio 2024</div>
+</div>
+<div class="al-row reveal" data-search="diflusion: sistema de alerta a tiempo real frente a la influenza aviar laboratorio central de veterinaria de algete  · algete · abril 2023 divulgacion">
+<div class="al-title">DiFLUsion: sistema de alerta a tiempo real frente a la influenza aviar</div>
+<div class="al-meta">Laboratorio Central de Veterinaria de Algete  · Algete · abril 2023</div>
+</div>
+<div class="al-row reveal" data-search="epidemias y pandemias, conviértete en el virus más peligroso csic · madrid · noviembre 2022 divulgacion">
+<div class="al-title">Epidemias y pandemias, conviértete en el virus más peligroso</div>
+<div class="al-meta">CSIC · Madrid · noviembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="conviértete en un auténtico detective de epidemias csic · valdeolmos · noviembre 2022 divulgacion">
+<div class="al-title">Conviértete en un auténtico detective de epidemias</div>
+<div class="al-meta">CSIC · Valdeolmos · noviembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="epidemias y pandemias, conviértete en el virus más peligroso csic · madrid · septiembre 2022 divulgacion">
+<div class="al-title">Epidemias y pandemias, conviértete en el virus más peligroso</div>
+<div class="al-meta">CSIC · Madrid · septiembre 2022</div>
+</div>
+</div>
+</div>
+<div class="al-group">
+<h3 class="al-heading">Seminarios <span class="al-count">(7)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="inteligencia artificial: base y modelos aplicables al grupo de epidemiología y sanidad ambiental cisa-inia/csic (seminario interno) · 2 h · junio 2026 seminario">
+<div class="al-title">Inteligencia Artificial: Base y modelos aplicables al grupo de Epidemiología y Sanidad Ambiental</div>
+<div class="al-meta">CISA-INIA/CSIC (seminario interno) · 2 h · junio 2026</div>
+</div>
+<div class="al-row reveal" data-search="diflusion: un modelo sig aplicado a la industria ganadera máster en modelización matemática (usal) · mayo 2024 seminario">
+<div class="al-title">DiFLUsion: un modelo SIG aplicado a la industria ganadera</div>
+<div class="al-meta">Máster en Modelización Matemática (USAL) · mayo 2024</div>
+</div>
+<div class="al-row reveal" data-search="el diagnóstico de laboratorio, herramienta esencial para el control de la peste porcina africana cisa-inia/csic (ciclo de seminarios) · 1.5 h · diciembre 2022 seminario">
+<div class="al-title">El diagnóstico de laboratorio, herramienta esencial para el control de la peste porcina africana</div>
+<div class="al-meta">CISA-INIA/CSIC (Ciclo de Seminarios) · 1.5 h · diciembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="entrada y formación del virus de la peste porcina africana cisa-inia/csic (ciclo de seminarios) · 1.5 h · noviembre 2022 seminario">
+<div class="al-title">Entrada y formación del virus de la peste porcina africana</div>
+<div class="al-meta">CISA-INIA/CSIC (Ciclo de Seminarios) · 1.5 h · noviembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="patología veterinaria e investigación cisa-inia/csic (ciclo de seminarios) · 1.5 h · septiembre 2022 seminario">
+<div class="al-title">Patología Veterinaria e Investigación</div>
+<div class="al-meta">CISA-INIA/CSIC (Ciclo de Seminarios) · 1.5 h · septiembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="pseudopartículas de rhdv: optimización de la plataforma vacunal cisa-inia/csic (ciclo de seminarios) · 1.5 h · septiembre 2022 seminario">
+<div class="al-title">Pseudopartículas de RHDV: optimización de la plataforma vacunal</div>
+<div class="al-meta">CISA-INIA/CSIC (Ciclo de Seminarios) · 1.5 h · septiembre 2022</div>
+</div>
+<div class="al-row reveal" data-search="peste porcina africana: desarrollos epidemiológicos cisa-inia/csic (ciclo de seminarios) · 1.5 h · junio 2022 seminario">
+<div class="al-title">Peste porcina africana: desarrollos epidemiológicos</div>
+<div class="al-meta">CISA-INIA/CSIC (Ciclo de Seminarios) · 1.5 h · junio 2022</div>
+</div>
+</div>
+</div>
+<div class="al-group">
+<h3 class="al-heading">Estancias de Investigación <span class="al-count">(1)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="estancia de investigación movtec 2025-12 consejo superior de investigaciones científicas (csic) · barcelona · febrero 2026 estancia">
+<div class="al-title">Estancia de Investigación MOVTEC 2025-12</div>
+<div class="al-meta">Consejo Superior de Investigaciones Científicas (CSIC) · Barcelona · febrero 2026</div>
+</div>
+</div>
+</div>
+<div class="al-group">
+<h3 class="al-heading">Premios y Becas <span class="al-count">(2)</span></h3>
+<div class="al-rows">
+<div class="al-row reveal" data-search="premio a la investigación 2024 instituto de estudios del huevo · octubre 2024 premio beca">
+<div class="al-title">Premio a la Investigación 2024</div>
+<div class="al-meta">Instituto de Estudios del Huevo · octubre 2024</div>
+</div>
+<div class="al-row reveal" data-search="beca de introducción a la actividad investigadora instituto universitario de física fundamental y matemáticas (iuffym) · enero 2021 premio beca">
+<div class="al-title">Beca de introducción a la actividad investigadora</div>
+<div class="al-meta">Instituto Universitario de Física Fundamental y Matemáticas (IUFFYM) · enero 2021</div>
+</div>
+</div>
+</div>
+</div>
+<p class="hidden" id="no-results">No se encontraron resultados para tu búsqueda.</p>
+</div>
+</section>
+<section id="habilidades">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">05</span>
+<h2 class="section-title">Habilidades e Idiomas</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div class="skills-grid" id="skills">
+<div class="skill-card reveal" data-search="python"><h4>Python</h4></div>
+<div class="skill-card reveal" data-search="matlab"><h4>MATLAB</h4></div>
+<div class="skill-card reveal" data-search="mathematica"><h4>Mathematica</h4></div>
+<div class="skill-card reveal" data-search="fortran"><h4>Fortran</h4></div>
+<div class="skill-card reveal" data-search="qgis / arcgis"><h4>QGIS / ArcGIS</h4></div>
+<div class="skill-card reveal" data-search="latex"><h4>LaTeX</h4></div>
+<div class="skill-card reveal" data-search="office"><h4>Office</h4></div>
+<div class="skill-card reveal" data-search="inglés idioma"><h4>Inglés</h4><p>Idioma</p></div>
+</div>
+</div>
+</section>
+<section class="alt" id="contacto">
+<div class="wrap">
+<div class="section-head reveal">
+<span class="section-num">06</span>
+<h2 class="section-title">Contacto</h2>
+<div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
+</div>
+<div class="contact-row reveal">
+<div class="contact-item"><span>Email</span><a href="mailto:pablo.ibanez@inia.csic.es">pablo.ibanez@inia.csic.es</a></div>
+<div class="contact-item"><span>Teléfono</span><span style="color:var(--soil)">+34 916202300 Ext: 2185</span></div>
+<div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/pablo-ip" rel="noopener" target="_blank">www.linkedin.com/in/pablo-ip</a></div>
+<div class="contact-item"><span>ORCID</span><a href="https://orcid.org/0009-0004-0618-8646" rel="noopener" target="_blank">orcid.org/0009-0004-0618-8646</a></div>
+<div class="contact-item"><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Pablo-Ibanez-Porras" rel="noopener" target="_blank">www.researchgate.net/profile/Pablo-Ibanez-Porras</a></div>
+<div class="contact-item"><span>Google Scholar</span><a href="https://scholar.google.es/citations?user=KIKnnSYAAAAJ&amp;hl" rel="noopener" target="_blank">scholar.google.es/citations?user=KIKnnSYAAAAJ&amp;hl</a></div>
+<div class="contact-item"><span>StoryMap</span><a href="https://storymaps.arcgis.com/stories/7a76b3329ef0490c9ec07db7ac4d395c" rel="noopener" target="_blank">storymaps.arcgis.com/stories/7a76b3329ef0490c9ec07db7ac4d395c</a></div>
+</div>
+<div class="about-generation reveal"><strong>Sobre esta página:</strong> se genera automáticamente a partir del registro privado de actividades. La web pública no contiene el Excel de administración. Última actualización: <strong>02/08/2026 10:23</strong>.</div>
+</div>
+</section>
+<footer>
+<div class="wrap">
+<span>© 2026 Pablo Ibáñez-Porras</span>
+<span>Actualizado: 02/08/2026 10:23</span>
+</div>
+</footer>
+<script>
+  const NS = 'http://www.w3.org/2000/svg';
+
+  function buildBackgroundGraph(){
+    const g = document.getElementById('bgHover');
+    const W = 1000, H = 460;
+    const clusters = 5;
+    for(let c=0;c<clusters;c++){
+      const cx = 80 + Math.random()*(W-160);
+      const cy = 60 + Math.random()*(H-120);
+      const n = 5 + Math.floor(Math.random()*5);
+      const pts = [];
+      for(let i=0;i<n;i++){
+        const angle = Math.random()*Math.PI*2;
+        const dist = 20 + Math.random()*70;
+        pts.push([cx + Math.cos(angle)*dist, cy + Math.sin(angle)*dist*0.7]);
+      }
+      for(let i=1;i<n;i++){
+        const j = Math.floor(Math.random()*i);
+        drawBgEdge(g, pts[i], pts[j]);
+      }
+      const extra = Math.floor(n*0.6);
+      for(let k=0;k<extra;k++){
+        const a = Math.floor(Math.random()*n), b = Math.floor(Math.random()*n);
+        if(a!==b) drawBgEdge(g, pts[a], pts[b]);
+      }
+      pts.forEach(p => drawBgNode(g, p));
+    }
+    for(let i=0;i<3;i++){
+      drawBgEdge(g, [Math.random()*W, Math.random()*H], [Math.random()*W, Math.random()*H], 0.045);
+    }
+  }
+  function drawBgEdge(g, p1, p2, opacity){
+    const l = document.createElementNS(NS,'line');
+    l.setAttribute('x1',p1[0]); l.setAttribute('y1',p1[1]);
+    l.setAttribute('x2',p2[0]); l.setAttribute('y2',p2[1]);
+    l.setAttribute('class','bg-edge');
+    if(opacity) l.style.opacity = opacity;
+    g.appendChild(l);
+  }
+  function drawBgNode(g, p){
+    const c = document.createElementNS(NS,'circle');
+    c.setAttribute('cx',p[0]); c.setAttribute('cy',p[1]); c.setAttribute('r', 2 + Math.random()*1.6);
+    c.setAttribute('class','bg-node');
+    c.style.animationDelay = (Math.random()*7).toFixed(2)+'s';
+    c.style.animationDuration = (6+Math.random()*5).toFixed(2)+'s';
+    g.appendChild(c);
+  }
+  buildBackgroundGraph();
+
+  (function(){
+    const hero = document.getElementById('top');
+    const hoverLayer = document.getElementById('bgHover');
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    hero.addEventListener('mousemove', (e)=>{
+      const rect = hero.getBoundingClientRect();
+      const nx = (e.clientX - rect.left)/rect.width - 0.5;
+      const ny = (e.clientY - rect.top)/rect.height - 0.5;
+      hoverLayer.style.transform = `translate(${nx*18}px, ${ny*14}px) scale(1.05)`;
+    });
+    hero.addEventListener('mouseleave', ()=>{
+      hoverLayer.style.transform = 'translate(0,0) scale(1)';
+    });
+  })();
+
+  document.querySelectorAll('.sep-node').forEach(el=>{
+    const angle = Math.random()*Math.PI*2;
+    const d = 14 + Math.random()*16;
+    el.style.setProperty('--dx', (Math.cos(angle)*d).toFixed(1)+'px');
+    el.style.setProperty('--dy', (Math.sin(angle)*d).toFixed(1)+'px');
+  });
+
+  const input = document.getElementById('search');
+  const countEl = document.getElementById('search-count');
+  const noResults = document.getElementById('no-results');
+  const items = Array.from(document.querySelectorAll('[data-search]'));
+
+  function normalize(str){
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  }
+
+  input.addEventListener('input', () => {
+    const q = normalize(input.value.trim());
+    let visible = 0;
+    items.forEach(el => {
+      const haystack = normalize(el.dataset.search + ' ' + el.textContent);
+      const match = q === '' || haystack.includes(q);
+      el.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    countEl.textContent = q ? (visible + ' resultado' + (visible===1?'':'s')) : '';
+    noResults.classList.toggle('hidden', !(q && visible === 0));
+  });
+
+  const revealEls = document.querySelectorAll('.reveal, .tl-item, .node-sep');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  const counters = document.querySelectorAll('[data-count]');
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const duration = 900;
+      const start = performance.now();
+      function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(progress * target);
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      cio.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => cio.observe(el));
+</script>
+<script>
+  const navToggle=document.querySelector('.nav-toggle'),navLinks=document.querySelector('.navlinks');
+  navToggle?.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',String(open));});
+  navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');navToggle?.setAttribute('aria-expanded','false')}));
+</script></body>
+</html>
