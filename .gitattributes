@@ -1,0 +1,19 @@
+# Mantiene finales de línea consistentes y evita avisos LF/CRLF.
+* text=auto
+
+*.html text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.bat text eol=crlf
+
+# Los recursos binarios no deben someterse a conversiones ni comparadores de texto.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.ttf binary

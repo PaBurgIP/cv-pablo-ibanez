@@ -48,7 +48,7 @@ echo Preparando la actualizacion para GitHub...
 git add -A
 if errorlevel 1 exit /b 1
 
-git diff --cached --quiet
+git diff --cached --quiet --no-ext-diff
 if errorlevel 2 exit /b 1
 if not errorlevel 1 (
   echo No hay cambios nuevos que publicar.
