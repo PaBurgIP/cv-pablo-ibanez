@@ -1,0 +1,6 @@
+tmp/
+__pycache__/
+*.pyc
+*.xlsx
+index - copia.html
+*.backup-*.pdf
