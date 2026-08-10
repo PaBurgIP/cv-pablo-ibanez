@@ -58,7 +58,16 @@ if not errorlevel 1 (
 git commit -m "Actualiza CV"
 if errorlevel 1 exit /b 1
 
-git push
+git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >nul 2>nul
+if errorlevel 1 (
+  for /f "delims=" %%B in ('git branch --show-current') do set "CV_GIT_BRANCH=%%B"
+  if not defined CV_GIT_BRANCH exit /b 1
+  git remote get-url origin >nul 2>nul
+  if errorlevel 1 exit /b 1
+  git push --set-upstream origin "%CV_GIT_BRANCH%"
+) else (
+  git push
+)
 if errorlevel 1 exit /b 1
 
 echo CV publicado correctamente en GitHub.
