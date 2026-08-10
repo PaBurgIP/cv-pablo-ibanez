@@ -60,11 +60,9 @@ if errorlevel 1 exit /b 1
 
 git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >nul 2>nul
 if errorlevel 1 (
-  for /f "delims=" %%B in ('git branch --show-current') do set "CV_GIT_BRANCH=%%B"
-  if not defined CV_GIT_BRANCH exit /b 1
   git remote get-url origin >nul 2>nul
   if errorlevel 1 exit /b 1
-  git push --set-upstream origin "%CV_GIT_BRANCH%"
+  git push --set-upstream origin main
 ) else (
   git push
 )
