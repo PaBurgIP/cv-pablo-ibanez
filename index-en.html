@@ -466,6 +466,38 @@
     .tool-panel.is-active{min-height:390px}.stat-ribbon{grid-template-columns:1fr 1fr}.profile-card-wrap{max-width:310px}
   }
 
+  /* Acordeón de secciones exclusivo de la vista móvil. */
+  @media screen and (max-width:820px){
+    body.mobile-sections-ready section.mobile-collapsible{scroll-margin-top:58px}
+    body.mobile-sections-ready section.mobile-collapsible:not(.mobile-section-open){padding:0}
+    body.mobile-sections-ready section.mobile-collapsible:not(.mobile-section-open)>.wrap>:not(.section-head){display:none!important}
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head{
+      position:relative;cursor:pointer;user-select:none;outline:none
+    }
+    body.mobile-sections-ready section.mobile-collapsible:not(.mobile-section-open)>.wrap>.section-head{
+      margin:0;padding:22px 48px 22px 0
+    }
+    body.mobile-sections-ready section.mobile-collapsible.mobile-section-open>.wrap>.section-head{
+      padding-right:48px
+    }
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head::after{
+      content:'+';position:absolute;right:0;top:50%;width:32px;height:32px;display:grid;place-items:center;
+      border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.42);color:var(--olive);
+      font:500 24px/1 var(--display);transform:translateY(-50%);transition:background .2s,border-color .2s,color .2s
+    }
+    body.mobile-sections-ready section.mobile-collapsible.mobile-section-open>.wrap>.section-head::after{content:'−'}
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head:hover::after,
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head:focus-visible::after{
+      border-color:var(--olive);background:var(--olive);color:#fff
+    }
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head:focus-visible{
+      outline:2px solid var(--olive);outline-offset:5px;border-radius:8px
+    }
+    body.mobile-sections-ready section.mobile-collapsible>.wrap>.section-head .section-title{
+      font-size:clamp(22px,7vw,30px);white-space:normal
+    }
+  }
+
   @page{size:A4;margin:11mm}
   @media print{
     *{animation:none!important;transition:none!important}
@@ -966,6 +998,72 @@
     });
   }
 
+  const mobileSectionsMedia = window.matchMedia('(max-width: 820px)');
+  const mobileSections = Array.from(document.querySelectorAll('section[id]')).filter(section =>
+    section.querySelector(':scope > .wrap > .section-head')
+  );
+  let mobileSectionsInitialized = false;
+
+  const setMobileSectionOpen = (section, open) => {
+    if (!section) return;
+    section.classList.toggle('mobile-section-open', open);
+    const head = section.querySelector(':scope > .wrap > .section-head');
+    if (mobileSectionsMedia.matches) head?.setAttribute('aria-expanded', String(open));
+  };
+
+  const openCurrentHashSection = () => {
+    if (!mobileSectionsMedia.matches || !window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (target?.classList.contains('mobile-collapsible')) setMobileSectionOpen(target, true);
+  };
+
+  const syncMobileSections = () => {
+    if (mobileSectionsMedia.matches) {
+      if (!mobileSectionsInitialized) {
+        mobileSections.forEach(section => setMobileSectionOpen(section, section.id === 'sobre-mi'));
+        mobileSectionsInitialized = true;
+      }
+      mobileSections.forEach(section => {
+        const head = section.querySelector(':scope > .wrap > .section-head');
+        head?.setAttribute('role', 'button');
+        head?.setAttribute('tabindex', '0');
+        head?.setAttribute('aria-expanded', String(section.classList.contains('mobile-section-open')));
+      });
+      document.body.classList.add('mobile-sections-ready');
+      openCurrentHashSection();
+    } else {
+      document.body.classList.remove('mobile-sections-ready');
+      mobileSections.forEach(section => {
+        const head = section.querySelector(':scope > .wrap > .section-head');
+        head?.removeAttribute('role');
+        head?.removeAttribute('tabindex');
+        head?.removeAttribute('aria-expanded');
+      });
+    }
+  };
+
+  mobileSections.forEach(section => {
+    section.classList.add('mobile-collapsible');
+    const head = section.querySelector(':scope > .wrap > .section-head');
+    const toggle = () => {
+      if (!mobileSectionsMedia.matches) return;
+      setMobileSectionOpen(section, !section.classList.contains('mobile-section-open'));
+    };
+    head?.addEventListener('click', toggle);
+    head?.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      toggle();
+    });
+  });
+  if (typeof mobileSectionsMedia.addEventListener === 'function') {
+    mobileSectionsMedia.addEventListener('change', syncMobileSections);
+  } else {
+    mobileSectionsMedia.addListener(syncMobileSections);
+  }
+  window.addEventListener('hashchange', openCurrentHashSection);
+  syncMobileSections();
+
   const gallery = document.getElementById('tool-gallery');
   const panels = gallery ? Array.from(gallery.querySelectorAll('.tool-panel')) : [];
   let activeTool = Math.max(0, panels.findIndex(panel => panel.classList.contains('is-active')));
@@ -1010,6 +1108,11 @@
     navToggle.setAttribute('aria-expanded',String(open));
   });
   navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    const href = a.getAttribute('href');
+    if (mobileSectionsMedia.matches && href?.startsWith('#')) {
+      const target = document.querySelector(href);
+      if (target?.classList.contains('mobile-collapsible')) setMobileSectionOpen(target, true);
+    }
     navLinks.classList.remove('open');navToggle?.setAttribute('aria-expanded','false');
   }));
 
