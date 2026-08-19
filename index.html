@@ -135,6 +135,38 @@
   .hero-panel .role{color:rgba(245,248,246,.9);text-shadow:0 1px 16px rgba(0,0,0,.28)}
   .hero-panel .eyebrow{color:#ffad68;text-shadow:0 1px 12px rgba(0,0,0,.45)}
   .hero-panel .eyebrow::before{background:currentColor;box-shadow:0 0 10px rgba(255,173,104,.42)}
+  .hero-cv-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:28px;
+    padding:11px 18px;
+
+    border:1px solid rgba(255,173,104,.65);
+    border-radius:999px;
+
+    background:rgba(255,173,104,.12);
+    color:#ffad68;
+
+    font:650 12px var(--mono);
+    letter-spacing:.03em;
+    text-decoration:none;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.hero-cv-button:hover,
+.hero-cv-button:focus-visible{
+    background:#ffad68;
+    color:#14232D;
+    border-color:#ffad68;
+    transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(255,173,104,.18);
+}
 
   .hero-contact-panel{height:100%;padding:18px;border:1px solid rgba(255,255,255,.38);border-radius:14px;background:rgba(255,255,255,.68);box-shadow:0 12px 30px rgba(23,34,38,.08);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
   .hero-contact-panel .hero-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0}
@@ -153,7 +185,24 @@
 
   section{ padding:80px 0; position:relative; }
   section.alt{ background:var(--wheat-deep); }
+.project-link{
+    color:var(--clay);
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid rgba(244,148,40,.35);
+    transition:color .2s ease,border-color .2s ease;
+}
 
+.project-link:hover,
+.project-link:focus-visible{
+    color:var(--dif-orange-deep);
+    border-color:var(--dif-orange-deep);
+}
+.project-link--block{
+    display:table;
+    margin-top:6px;
+    width:auto;
+}
   .section-head{ display:flex; align-items:center; gap:16px; margin-bottom:40px; }
   .section-num{ font-family:var(--mono); font-size:13px; color:var(--clay); }
   .section-title{ font-family:var(--display); font-weight:700; font-size:clamp(26px,4vw,36px); white-space:nowrap; }
@@ -430,7 +479,23 @@
   .tool-panel__link{font:600 11px var(--mono);color:var(--tool-accent);opacity:0;transition:.35s .13s ease}
   .tool-panel.is-active h3 span,.tool-panel.is-active p,.tool-panel.is-active .tool-panel__link{opacity:1;transform:none}
   .tool-gallery-note{font-size:12px;color:var(--soil-soft);margin-top:12px;text-align:right}
+/* Contribución personal en las herramientas */
+/* Contribución personal en las herramientas */
+.tool-contribution {
+    width: 90%;
+    box-sizing: border-box;
+    margin: 24px auto 0;
+    padding: 20px 24px;
+    border: 1px solid rgba(47, 143, 82, .22);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .58);
+}
 
+.tool-contribution h3 {
+    margin: 0;
+    font: 500 14px/1.55 var(--body);
+    color: var(--soil-soft);
+}
   /* Secciones independientes de divulgación y reconocimientos. */
   .standalone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
   .standalone-card{padding:21px;border:1px solid var(--line);border-radius:14px;background:var(--cream);display:flex;flex-direction:column;gap:7px;min-height:160px}
@@ -568,6 +633,11 @@
 <div class="hero-panel border-glow-card" id="hero-summary">
   <div class="eyebrow">Investigador predoctoral en CISA-INIA-CSIC</div>
   <p class="role">Enfoque aplicado de la física y las matemáticas al sector agrotecnológico mediante modelización matemática y aplicación de algoritmos GIS.</p>
+  <a class="hero-cv-button"
+   href="CV%20Pablo%20Ib%C3%A1%C3%B1ez-Porras.pdf"
+   download>
+    Descargar CV en PDF
+</a>
 </div>
 <aside class="hero-contact-panel" aria-label="Enlaces de contacto y perfiles">
   <div class="hero-links">
@@ -576,7 +646,8 @@
 <a href="https://orcid.org/0009-0004-0618-8646" rel="noopener" target="_blank">ORCID</a>
 <a href="https://www.researchgate.net/profile/Pablo-Ibanez-Porras" rel="noopener" target="_blank">ResearchGate</a>
 <a href="https://scholar.google.es/citations?user=KIKnnSYAAAAJ&amp;hl" rel="noopener" target="_blank">Google Scholar</a>
-<a download="" href="CV%20Pablo%20Ib%C3%A1%C3%B1ez-Porras.pdf">Descargar CV en PDF</a>
+<a href="https://www.cisa.csic.es/grupo-de-epidemiologia-y-sanidad-ambiental-eysa/" rel="noopener" target="_blank">Grupo EySA</a>
+
 </div>
 </aside>
 </div>
@@ -635,7 +706,7 @@
     <div class="tl-item reveal" data-search="creación de modelos, visores y aplicaciones para la evaluación rápida de riesgos frente a la aparición de patógenos centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por european partnership on animal health and welfare (2024-2027) contratado proyecto experiencia">
 <div class="tl-dot"></div>
 <div class="tl-period">2026 — 2027</div>
-<div class="tl-role">Desarrollo de un modelo de difusión intrapeninsular de IAAP en aves silvestres e identificación de conexiones epidemiológicas entre casos mediante análisis filogenético.</div>
+<div class="tl-role">Desarrollo de un modelo de difusión intrapeninsular de IAAP en aves silvestres</div>
 <div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
 <div class="tl-desc">Contrato financiado por Encomienda de Gestión del Ministerio de Agricultura, Pesca y Alimentación (2025-2027)</div>
 <div class="tags"><span class="tag">Contratado</span></div>
@@ -645,7 +716,8 @@
 <div class="tl-period">2024 — 2026</div>
 <div class="tl-role">Creación de modelos, visores y aplicaciones para la evaluación rápida de riesgos frente a la aparición de patógenos</div>
 <div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
-<div class="tl-desc">Contrato financiado por European Partnership on Animal Health and Welfare (2024-2027)</div>
+<div class="tl-desc">Contrato financiado por European Partnership on Animal Health and Welfare     <a class="project-link" href="https://www.eupahw.eu/" target="_blank" rel="noopener">
+        Horizon Europe GA 101136346</a> (2024-2027)</div>
 <div class="tags"><span class="tag">Contratado</span></div>
 </div>
 <div class="tl-item reveal" data-search="modelo de cálculo de coste-beneficio de la vacunación temprana en jabalí silvestre ante la aparición de brotes de peste porcina africana (ppa) centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por proyecto vacdiva (2023-2024) contratado proyecto experiencia">
@@ -653,7 +725,8 @@
 <div class="tl-period">2023 — 2024</div>
 <div class="tl-role">Modelo de cálculo de coste-beneficio de la vacunación temprana en jabalí silvestre ante la aparición de brotes de Peste Porcina Africana (PPA)</div>
 <div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
-<div class="tl-desc">Contrato financiado por Proyecto VACDIVA (2023-2024)</div>
+<div class="tl-desc">Contrato financiado por Proyecto VACDIVA     <a class="project-link" href="https://vacdiva.eu/" target="_blank" rel="noopener">
+        Horizon 2020 GA 862874</a> (2023-2024)</div>
 <div class="tags"><span class="tag">Contratado</span></div>
 </div>
 <div class="tl-item reveal" data-search="mejora del sistema de alertas diflusion de introducción de influenza aviar por aves silvestres en españa y desarrollo de la herramienta protectia de análisis de riesgo de introducción de la enfermedad en explotaciones avícolas centro de investigación en sanidad animal (cisa-inia-csic) contrato financiado por encomienda de gestión del ministerio de agricultura, pesca y alimentación (2022-2023) contratado proyecto experiencia">
@@ -661,7 +734,8 @@
 <div class="tl-period">2022 — 2023</div>
 <div class="tl-role">Mejora del sistema de alertas DiFLUsion de introducción de Influenza Aviar por aves silvestres en España y desarrollo de la herramienta ProtectIA de análisis de riesgo de introducción de la enfermedad en explotaciones avícolas</div>
 <div class="tl-org">Centro de Investigación en Sanidad Animal (CISA-INIA-CSIC)</div>
-<div class="tl-desc">Contrato financiado por Encomienda de Gestión del Ministerio de Agricultura, Pesca y Alimentación (2022-2023)</div>
+<div class="tl-desc">Contrato financiado por Encomienda de Gestión del Ministerio de Agricultura, Pesca y Alimentación     <a class="project-link" href="https://www.mapa.gob.es/" target="_blank" rel="noopener">
+        CON20-171</a> (2022-2023)</div>
 <div class="tags"><span class="tag">Contratado</span></div>
 </div>
 <div class="tl-item reveal" data-search='máster universitario en modelización matemática universidad de salamanca tfm: "modelo de propagación de epidemias entre comunidades definidas sobre redes complejas considerando flujo poblacional". formacion academica'>
@@ -669,7 +743,14 @@
 <div class="tl-period">2021</div>
 <div class="tl-role">Máster Universitario en Modelización Matemática</div>
 <div class="tl-org">Universidad de Salamanca</div>
-<div class="tl-desc">TFM: "Modelo de propagación de epidemias entre comunidades definidas sobre redes complejas considerando flujo poblacional". · <a href="https://gredos.usal.es/handle/10366/150383" rel="noopener" style="text-decoration:underline;" target="_blank">Ver trabajo</a></div>
+<div class="tl-desc">TFM: "Modelo de propagación de epidemias entre comunidades definidas sobre redes complejas considerando flujo poblacional".
+        <a class="project-link project-link--block"
+           href="https://gredos.usal.es/handle/10366/150383"
+           target="_blank"
+           rel="noopener">
+            Ver trabajo
+        </a>
+</div>
 <div class="tags"><span class="tag">Formación académica</span></div>
 </div>
 <div class="tl-item reveal" data-search="modelización de la interacción de haces de protones con distintos objetivos utilizando fluka (software de simulación de interacciones de partículas basado en el método montecarlo) centro de láseres pulsados ultracortos y ultraintensos (clpu) prácticas de grado proyecto experiencia">
@@ -684,7 +765,12 @@
 <div class="tl-period">2020</div>
 <div class="tl-role">Grado en Física</div>
 <div class="tl-org">Universidad de Salamanca</div>
-<div class="tl-desc">TFG: "Redes complejas: Descripción, análisis y aplicaciones". · <a href="https://gredos.usal.es/handle/10366/143828" rel="noopener" style="text-decoration:underline;" target="_blank">Ver trabajo</a></div>
+<div class="tl-desc">TFG: "Redes complejas: Descripción, análisis y aplicaciones".         <a class="project-link project-link--block"
+           href="https://gredos.usal.es/handle/10366/143828"
+           target="_blank"
+           rel="noopener">
+            Ver trabajo
+        </a></div>
 <div class="tags"><span class="tag">Formación académica</span></div>
 </div>
   </div>
@@ -798,7 +884,7 @@
 <div class="wrap">
 <div class="section-head reveal">
 <span class="section-num">06</span>
-<h2 class="section-title">Herramientas desarrolladas</h2>
+<h2 class="section-title">Colaboración en el desarrollo de herramientas</h2>
 <div class="node-sep"><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span><span class="sep-node"></span></div>
 </div>
 <div class="tool-gallery reveal" id="tool-gallery" role="list" aria-label="Carrusel de herramientas científicas">
@@ -831,6 +917,12 @@
 </div>
 <p class="tool-gallery-note">Pasa el cursor, usa las flechas del teclado o toca una tarjeta para explorar.</p>
 </div>
+<div class="tool-contribution reveal">
+    <h3>
+        En estas herramientas, mi contribución ha sido el desarrollo de los modelos matemáticos y su formalismo, la integración de datos espaciales y temporales, la implementación de algoritmos computacionales de análisis y la interpretación de los resultados.
+    </h3>
+</div>
+
 </section>
 
 <section id="divulgacion">
@@ -897,6 +989,7 @@
 </div>
 <div class="contact-row reveal">
 <div class="contact-item"><span>Email</span><a href="mailto:pabloibanezporras@gmail.com">pabloibanezporras@gmail.com</a></div>
+<div class="contact-item"><span>Teléfono</span><span style="color:var(--soil)">+34 916202300 Ext: 2185</span></div>
 <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/pablo-ip" rel="noopener" target="_blank">www.linkedin.com/in/pablo-ip</a></div>
 <div class="contact-item"><span>ORCID</span><a href="https://orcid.org/0009-0004-0618-8646" rel="noopener" target="_blank">orcid.org/0009-0004-0618-8646</a></div>
 <div class="contact-item"><span>ResearchGate</span><a href="https://www.researchgate.net/profile/Pablo-Ibanez-Porras" rel="noopener" target="_blank">www.researchgate.net/profile/Pablo-Ibanez-Porras</a></div>
